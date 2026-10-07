@@ -1,6 +1,6 @@
 # ESP8266 MQTT communication demo
 
-Demo riutilizzabile per collegare un firmware embedded a un broker MQTT tramite ESP8266 e per visualizzare messaggi in una pagina web ospitata da un secondo ESP8266. I parametri di rete e i topic si impostano in un solo file locale, senza modificare il codice sorgente.
+Demo realizzata durante il Neapolis Summer Campus 2026, riutilizzabile per collegare un firmware embedded a un broker MQTT tramite ESP8266 e per visualizzare messaggi in una pagina web ospitata da un secondo ESP8266. I parametri di rete e i topic si impostano in un solo file locale, senza modificare il codice sorgente.
 
 La repository contiene due percorsi indipendenti:
 - **Bridge UART → Wi-Fi/TCP:** La scheda principale compone e interpreta i pacchetti MQTT; lo sketch ESP8266 trasporta byte tra UART e broker. Il firmware fornito per la scheda principale usa STM32G474RE e ChibiOS.
