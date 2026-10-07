@@ -66,13 +66,13 @@ def main():
     if broker_password and not username:
         raise ValueError("broker.username è obbligatorio se imposti broker.password")
     names = [checked_identifier(devices[key], f"devices.{key}") for key in (
-        "stm32_client_id", "stm32_server_id", "dashboard_id", "operator_id")]
+        "stm32_client_id", "stm32_server_id", "dashboard_id", "device_id")]
     if len(set(names[:3])) != 3:
         raise ValueError("i tre MQTT Client ID devono essere univoci")
     if any(len(name) > 64 for name in names[:3]):
         raise ValueError("MQTT Client ID: massimo 64 caratteri")
-    if len(devices["operator_id"]) > 16:
-        raise ValueError("devices.operator_id: massimo 16 caratteri per il payload STM32")
+    if len(devices["device_id"]) > 16:
+        raise ValueError("devices.device_id: massimo 16 caratteri per il payload STM32")
     topic_values = [checked_topic(topics[key], f"topics.{key}") for key in ("sos", "telemetry", "status")]
     if len(set(topic_values)) != 3:
         raise ValueError("i tre topic devono essere distinti")
@@ -95,7 +95,7 @@ def main():
     destinations = {
         "communication/client/include/app_config.h": [
             f"#define APP_MQTT_CLIENT_ID {c_string(devices['stm32_client_id'])}",
-            f"#define APP_DEVICE_ID {c_string(devices['operator_id'])}",
+            f"#define APP_DEVICE_ID {c_string(devices['device_id'])}",
             "#define APP_TELEMETRY_PERIOD_MS 1000U",
             "#define APP_SENSOR_MAX_AGE_MS 3000U",
         ],

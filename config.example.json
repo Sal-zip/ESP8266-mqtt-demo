@@ -10,14 +10,14 @@
     "password": ""
   },
   "topics": {
-    "sos": "demo/rescue-vest/sos",
-    "telemetry": "demo/rescue-vest/telemetry",
-    "status": "demo/rescue-vest/status"
+    "sos": "demo/esp8266/alerts",
+    "telemetry": "demo/esp8266/telemetry",
+    "status": "demo/esp8266/status"
   },
   "devices": {
     "stm32_client_id": "demo-stm32-client-01",
     "stm32_server_id": "demo-stm32-server-01",
     "dashboard_id": "demo-dashboard-01",
-    "operator_id": "operator-01"
+    "device_id": "device-01"
   }
 }
