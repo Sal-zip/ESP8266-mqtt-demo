@@ -1,13 +1,12 @@
 # ESP8266 MQTT communication demo
 
-Esempio riutilizzabile per collegare un firmware embedded a un broker MQTT tramite ESP8266 e per visualizzare messaggi in una pagina web ospitata da un secondo ESP8266. I parametri di rete e i topic si impostano in un solo file locale, senza modificare il codice sorgente.
+Demo riutilizzabile per collegare un firmware embedded a un broker MQTT tramite ESP8266 e per visualizzare messaggi in una pagina web ospitata da un secondo ESP8266. I parametri di rete e i topic si impostano in un solo file locale, senza modificare il codice sorgente.
 
 La repository contiene due percorsi indipendenti:
+- **Bridge UART → Wi-Fi/TCP:** La scheda principale compone e interpreta i pacchetti MQTT; lo sketch ESP8266 trasporta byte tra UART e broker. Il firmware fornito per la scheda principale usa STM32G474RE e ChibiOS.
+- **Dashboard MQTT → HTTP:** Un altro ESP8266 si connette direttamente al broker, riceve i messaggi e serve una pagina web. Può funzionare anche senza le schede STM32.
 
-- **Bridge UART → Wi-Fi/TCP:** la scheda principale compone e interpreta i pacchetti MQTT; lo sketch ESP8266 trasporta byte tra UART e broker. Il firmware fornito per la scheda principale usa STM32G474RE e ChibiOS.
-- **Dashboard MQTT → HTTP:** un altro ESP8266 si connette direttamente al broker, riceve i messaggi e serve una pagina web. Può funzionare anche senza le schede STM32.
-
-Il broker Mosquitto gira su un computer o server raggiungibile nella rete, non sull'ESP8266. Questa architettura usa un broker centrale: non realizza una rete mesh.
+Il broker Mosquitto gira su un computer o server raggiungibile nella rete, non sull'ESP8266.
 
 ## Contenuto
 
