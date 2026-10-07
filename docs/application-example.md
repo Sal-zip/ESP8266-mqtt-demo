@@ -59,4 +59,4 @@ I topic del codice sono configurabili, ma i ruoli restano tre: telemetry, status
 
 Il client applicativo conserva in RAM fino a otto eventi critici e ritenta un messaggio QoS 1 finché non riceve PUBACK. Dopo un riavvio o un'interruzione di alimentazione prima della conferma, l'evento può andare perso. La telemetria più recente è tenuta separata dagli eventi critici. Il server ha un'inbox statica di otto messaggi; la dashboard conserva gli ultimi venti in RAM e il browser ricostruisce la vista dai messaggi disponibili. QoS 1 può produrre duplicati dopo una riconnessione, perciò un'integrazione che esige unicità deve usare eventId.
 
-La connessione al broker è MQTT/TCP non cifrata. La pagina web è servita direttamente dall'ESP8266 e carica Leaflet e le tessere OpenStreetMap dal browser. Non è il backend web sviluppato in una fase successiva del progetto.
+La connessione al broker è MQTT/TCP non cifrata. La pagina web è servita direttamente dall'ESP8266 e carica Leaflet e le tessere OpenStreetMap dal browser. 
