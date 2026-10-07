@@ -1,0 +1,9 @@
+config.json
+communication/client/include/app_config.h
+communication/server/include/app_config.h
+communication/server/esp8266/neapolis_sos_dashboard/demo_config.h
+**/build/
+**/.dep/
+*.bin
+*.elf
+__pycache__/

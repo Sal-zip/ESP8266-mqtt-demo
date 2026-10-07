@@ -1,0 +1,23 @@
+{
+  "wifi": {
+    "ssid": "YOUR_WIFI_SSID",
+    "password": "YOUR_WIFI_PASSWORD"
+  },
+  "broker": {
+    "host": "BROKER_LAN_IP_OR_HOSTNAME",
+    "port": 1883,
+    "username": "",
+    "password": ""
+  },
+  "topics": {
+    "sos": "demo/rescue-vest/sos",
+    "telemetry": "demo/rescue-vest/telemetry",
+    "status": "demo/rescue-vest/status"
+  },
+  "devices": {
+    "stm32_client_id": "demo-stm32-client-01",
+    "stm32_server_id": "demo-stm32-server-01",
+    "dashboard_id": "demo-dashboard-01",
+    "operator_id": "operator-01"
+  }
+}
